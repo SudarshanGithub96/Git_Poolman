@@ -1,0 +1,74 @@
+﻿@model Poolman.Models.Employee
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h4>Employee</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form class="E_Form">
+            <div class="form-group">
+                <label for="firstname" class="form-label">First Name <span class="text-danger">*</span></label>
+                <input asp-for="Firstname" class="form-control form-control-sm" placeholder="Enter First name">
+            </div>
+            <div class="form-group">
+                <label for="lastname" class="form-label">Last Name <span class="text-danger">*</span></label>
+                <input asp-for="Lastname" class="form-control form-control-sm" placeholder="Enter Last name">
+            </div>
+            <div class="form-group">
+                <label for="username" class="form-label">User Name <span class="text-danger">*</span></label>
+                <input asp-for="Username" class="form-control form-control-sm" placeholder="Enter User name">
+            </div>
+            <div class="form-group">
+                <label for="password" class="form-label">Password<span class="text-danger">*</span></label>
+                <input asp-for="Password" class="form-control form-control-sm" placeholder="Enter Password">
+            </div>
+            <div class="form-group">
+                <label for="confirmpassword" class="form-label">Confirm Password<span class="text-danger">*</span></label>
+                <input asp-for="ConfirmPassword" class="form-control form-control-sm" placeholder="Enter Confirm Password">
+            </div>
+            <div class="form-group">
+                <label for="age" class="form-label">Age<span class="text-danger">*</span></label>
+                <input asp-for="Age" class="form-control form-control-sm" placeholder="Enter Age">
+            </div>
+            <div class="form-group">
+                <label for="email" class="form-label">Email Id <span class="text-danger">*</span></label>
+                <input asp-for="Email" id="txtemail" onchange="Emailvalidation()" class="form-control form-control-sm" placeholder="Enter your email ">
+            </div>
+            <div class="form-group">
+                <label for="phone" class="form-label">Phone<span class="text-danger">*</span></label>
+                <input asp-for="Phone" class="form-control form-control-sm" placeholder="Enter Phone">
+            </div>
+            <div class="form-group">
+                <label for="address" class="form-label">Address<span class="text-danger">*</span></label>
+                <input asp-for="Address" class="form-control form-control-sm" placeholder="Enter address">
+            </div>
+            <div class="form-group">
+                <label for="city" class="form-label">City<span class="text-danger">*</span></label>
+                <input asp-for="City" class="form-control form-control-sm" placeholder="Enter City">
+            </div>
+            <div class="form-group">
+                <label for="State" class="form-label">State<span class="text-danger">*</span></label>
+                <input asp-for="State" class="form-control form-control-sm" placeholder="Enter State">
+            </div>
+            <div class="form-group">
+                <label for="country" class="form-label">Country<span class="text-danger">*</span></label>
+                <select asp-for="Country" class="form-select" id="country">
+                    <option value="0">Please select country</option>
+                    <option value="1">India</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="zipcode" class="form-label">Zipcode<span class="text-danger">*</span></label>
+                <input asp-for="Zipcode" maxlength="6" id="txtpincode" onchange="pincodevalidation()" class="form-control form-control-sm" placeholder="Enter pincode">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
